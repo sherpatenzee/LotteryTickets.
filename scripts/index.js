@@ -29,6 +29,16 @@ window.onload = loadWinningTicketsTable;
 
  }
 
- function buildTicketRow(){
+ function buildTicketRow(tbody , ticket){
 
+    let row = tbody.insertRow();
+    let tdticketnumber = row.insertCell(0);
+    tdticketnumber.innerHTML = ticket.tixNum;
+
+    let tdprize = row.insertCell(1);
+    tdprize.innerHTML = "$" + ticket.prize.toFixed(2);
+
+
+    let tdexpires = row.insertCell(2);
+    tdexpires.innerHTML = ticket.expires;
  }
