@@ -20,5 +20,15 @@ window.onload = loadWinningTicketsTable;
 
  function loadWinningTicketsTable(){
 
-  
+  const tableBody = document.getElementById("winningTicketsTblBody")
+
+   for( let ticket of winningTickets){
+        buildTicketRow(tableBody , ticket);
+   }
+
+
+ }
+
+ function buildTicketRow(){
+
  }
